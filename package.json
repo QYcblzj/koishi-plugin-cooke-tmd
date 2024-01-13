@@ -9,10 +9,16 @@
     "dist"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QYcblzj/koish-plugin-cooke-tmd.git"
+  },
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "food",
+    "cooke"
   ],
   "author": "qycblzj <qianyue_64_32@outlook.com>",
   "peerDependencies": {
