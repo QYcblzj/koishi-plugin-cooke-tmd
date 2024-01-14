@@ -90,3 +90,17 @@ cooke-tmd -r
 list-categories
 ```
 这将返回一个所有食谱类别的列表。
+
+
+## 常见问题解决方案
+1. 如果你遇到的问题是*配置项不满足约束，并且tmd APIKey已经填了1*
+2. 将插件退回到最初的版本*v 0.0.13*重新填入配置项**1**
+3. 重新升级插件到最新版本
+-  如果不是步骤1的问题，请查看下述联系方式，联系插件作者解决问题
+
+
+## 联系方式
+<code>如果遇到任何问题的话，点击下面图片反馈吧</code>
+<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=kW4Mvn1XZsfR_ghZfzdMK0-RlqvSlAFG&authKey=i%2ByfvnYw2qw9Y98RegxyacrannA8z9MEXQ9fICWZb%2FxCxN8atmjox399OWN%2BwR5%2F&noverify=0&group_code=778554862">
+    <img src = "https://ts1.cn.mm.bing.net/th/id/R-C.270a9a085573e0969cada32727f32b2e?rik=TEUyuec7cBhg5A&riu=http%3a%2f%2fwww.guangyuanol.cn%2fuploads%2fallimg%2f221212%2f2121241109-20.gif&ehk=qDiCULkR%2f4whnJ5%2bzGrQoA7qZDpe12YPulqLLNU%2fEjs%3d&risl=&pid=ImgRaw&r=0" alt = "GROUP">
+</a>

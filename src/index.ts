@@ -11,10 +11,14 @@ export const Config: Schema<Config> = Schema.object({
 
 export const usage = `
 <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=kW4Mvn1XZsfR_ghZfzdMK0-RlqvSlAFG&authKey=i%2ByfvnYw2qw9Y98RegxyacrannA8z9MEXQ9fICWZb%2FxCxN8atmjox399OWN%2BwR5%2F&noverify=0&group_code=778554862">
-    <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.oDYdzPVEBcXZn_MRsHk2BQAAAA?rs=1&pid=ImgDetMain" alt="加入QQ群">
+    <img src="https://image.newasp.com/attachment/article/2022/1204/093738_49079822.gif" alt="加入QQ群">
 </a>
+<br>
 <a href="https://www.npmjs.com/package/koishi-plugin-cooke-tmd">    
-    <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.FQvt-4fgWsCF9tXQM78nWAHaHB?rs=1&pid=ImgDetMain" alt="readme">
+    <img src="https://images.dmzj.com/resource/news/2022/12/15/1671089076233184.gif" height = 400 width = 400 alt="readme">
+</a>
+<a href="https://github.com/QYcblzj/koishi-plugin-cooke-tmd.git">
+    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.01e4232cb97564ec027f3d2639198b50?rik=iHSptn%2bndh0WrA&riu=http%3a%2f%2fwww.guangyuanol.cn%2fuploads%2fallimg%2f221212%2f2121243350-21.gif&ehk=1m%2f5kjGYhtTGbYl64BciehpzgZfoMgyIFT16IsZIKXk%3d&risl=&pid=ImgRaw&r=0" alt="star">
 </a>
 `
 
@@ -107,8 +111,13 @@ export function apply(ctx: Context, { apiKey, enableTranslation }: Config) {
 
   function formatRecipes(recipes) {
     return recipes.map(recipe => {
-      const imageUrl = `${recipe.strMealThumb}/preview`;
-      return `${recipe.strMeal} - 查看详情: ${recipe.strSource}\n图片:[CQ:image,file=${imageUrl}]`;
+        if (typeof recipe.strMealThumb !== 'string') {
+            console.warn(`Expected strMealThumb to be a string, but got:`, recipe.strMealThumb);
+            // 处理 recipe.strMealThumb 不是字符串的情况
+        }
+        const imageUrl = `${recipe.strMealThumb}/preview`;
+        const image = `<img src="${imageUrl}">`; // 确保 URL 被引号包围
+        return `${recipe.strMeal} - 查看详情: ${recipe.strSource}\n图片:${image}`;
     }).join('\n');
-  }
+}
 }

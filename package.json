@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-cooke-tmd",
   "description": "当群u又想吃东西的时候，*做*出一份富有*爱*心的料理吧！（TheMealDB版）",
-  "version": "1.1.1",
+  "version": "1.6.65",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QYcblzj/koish-plugin-cooke-tmd.git"
+    "url": "git+https://github.com/QYcblzj/koishi-plugin-cooke-tmd.git"
   },
   "keywords": [
     "chatbot",
